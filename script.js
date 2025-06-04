@@ -1,12 +1,5 @@
-document.querySelectorAll("button").forEach(btn => {
-  if (!btn.classList.contains('carousel-button')) { // Evita que los botones del carrusel disparen el alerta de compra
-    btn.addEventListener("click", () => {
-      alert("¡Gracias por tu compra! 🛒");
-    });
-  }
-});
-
 document.addEventListener('DOMContentLoaded', () => {
+  // Manejo del carrusel de imágenes para productos con múltiples colores
   const carouselTracks = document.querySelectorAll('.carousel-track');
 
   carouselTracks.forEach(track => {
@@ -15,8 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalImages = images.length;
     const productId = track.dataset.productId;
 
+    // Si solo hay una imagen, ocultar los botones de navegación
     if (totalImages <= 1) {
-      // Ocultar botones de navegación si solo hay una imagen
       const parentContainer = track.closest('.carousel-container');
       const navButtons = parentContainer.querySelectorAll('.carousel-button');
       navButtons.forEach(button => button.style.display = 'none');
@@ -44,5 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCarousel();
       });
     }
+
+    // Inicializar el carrusel en la primera imagen
+    updateCarousel();
   });
 });
