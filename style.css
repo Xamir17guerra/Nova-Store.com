@@ -1,74 +1,169 @@
-/* ... (tu CSS existente) ... */
+body {
+  margin: 0;
+  font-family: 'SF Pro Display', 'Helvetica Neue', 'Arial', sans-serif; /* Simil Apple Font */
+  background-color: #f0f2f5; /* Tono de gris claro, similar a Apple */
+  color: #1d1d1f; /* Gris oscuro, similar a Apple */
+}
 
-.search-bar {
-  margin-top: 20px;
+header {
+  background-color: #000; /* Negro */
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  height: 40px; /* Ajusta el tamaño del logo */
+  margin-right: 10px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #00ff00; /* Verde del logo */
+}
+
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #00ff00; /* Verde del logo en hover */
+}
+
+.productos {
   display: flex;
   justify-content: center;
-  gap: 10px;
-}
-
-.search-bar input {
-  padding: 10px 15px;
-  border-radius: 25px;
-  border: 1px solid #ccc;
-  width: 50%; /* Ajusta el ancho según tu preferencia */
-  max-width: 400px;
-  font-size: 16px;
-}
-
-.search-bar button {
-  background-color: white; /* Color inverso para destacar */
-  color: black;
-  border: 1px solid black;
-  padding: 10px 20px;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.search-bar button:hover {
-  background-color: #333;
-  color: white;
-}
-
-/* Opcional: Estilo para productos ocultos por la búsqueda */
-.producto.hidden {
-  display: none;
-}
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 40px;
+  gap: 30px; /* Aumenta el espacio entre productos */
+  padding: 50px 20px;
   flex-wrap: wrap;
 }
 
 .producto {
-  background-color: white;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  width: 300px;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 20px; /* Bordes más redondeados */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+  width: 320px; /* Ancho ajustado para los productos */
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Para el carrusel */
+  position: relative; /* Para el carrusel */
 }
 
-.producto img {
+.producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Carrusel de imágenes */
+.carousel-container {
   width: 100%;
-  border-radius: 10px;
+  height: 220px; /* Altura fija para las imágenes */
+  overflow: hidden;
+  position: relative;
+  border-radius: 15px; /* Bordes redondeados para el contenedor del carrusel */
+  margin-bottom: 20px;
+}
+
+.carousel-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-image {
+  min-width: 100%;
+  height: 100%;
+  object-fit: contain; /* Asegura que la imagen se vea completa */
+  border-radius: 15px;
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.carousel-button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+.producto h2 {
+  font-size: 22px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #1d1d1f;
+}
+
+.producto p {
+  font-size: 15px;
+  color: #6a6a6a;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.producto span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00ff00; /* Verde del logo */
+  display: block;
+  margin-bottom: 15px;
 }
 
 .producto button {
-  background-color: black;
-  color: white;
+  background-color: #000; /* Negro */
+  color: #00ff00; /* Verde del logo */
   border: none;
-  padding: 10px 20px;
+  padding: 12px 25px;
   margin-top: 10px;
-  border-radius: 25px;
+  border-radius: 30px; /* Más redondeado */
   cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.producto button:hover {
+  background-color: #00ff00; /* Verde del logo */
+  color: #000; /* Texto negro en hover */
 }
 
 footer {
   text-align: center;
-  padding: 20px;
-  background-color: #eee;
+  padding: 25px;
+  background-color: #f5f5f7; /* Gris muy claro, similar a Apple */
+  color: #6a6a6a;
+  font-size: 14px;
+  margin-top: 40px;
 }
