@@ -3,12 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nova Store - Catálogo de Tecnología</title>
+  <title>Nova Tech Store</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Nova Store</h1>
+    <div class="logo-container">
+      <img src="nova_store_logo.jpg" alt="Nova Store Logo" class="header-logo" />
+      <h1>Tech Store</h1>
+    </div>
     <nav>
       <a href="#">Inicio</a>
       <a href="#">Productos</a>
@@ -18,51 +21,107 @@
 
   <section class="productos">
     <div class="producto">
-      <img src="https://via.placeholder.com/300x200?text=Audifonos" alt="Audífonos" />
-      <h2>Audífonos Inalámbricos</h2>
-      <p>Sonido envolvente y batería de larga duración.</p>
-      <span>$49.99</span>
+      <div class="carousel-container">
+        <div class="carousel-track" data-product-id="iaudio">
+          <img src="PRODUCTOS/iaudio/i_blanco.jpg" alt="Audífonos iAudio Blanco" class="carousel-image" />
+          <img src="PRODUCTOS/iaudio/i_negro.jpg" alt="Audífonos iAudio Negro" class="carousel-image" />
+        </div>
+        <div class="carousel-nav">
+          <button class="carousel-button prev" data-product-id="iaudio">&#10094;</button>
+          <button class="carousel-button next" data-product-id="iaudio">&#10095;</button>
+        </div>
+      </div>
+      <h2>Audífonos Inalámbricos Modelo i</h2>
+      <p>Sonido puro y diseño elegante, disponibles en blanco y negro.</p>
+      <span>$129.99</span>
       <button>Comprar</button>
     </div>
+
     <div class="producto">
-      <img src="https://via.placeholder.com/300x200?text=Smartwatch" alt="Smartwatch" />
-      <h2>Smartwatch Deportivo</h2>
+      <div class="carousel-container">
+        <div class="carousel-track" data-product-id="tws2025">
+          <img src="PRODUCTOS/TWS_2025/TWS_blanco.jpg" alt="Audífonos TWS 2025 Blanco" class="carousel-image" />
+          <img src="PRODUCTOS/TWS_2025/TWS_negro.jpg" alt="Audífonos TWS 2025 Negro" class="carousel-image" />
+          <img src="PRODUCTOS/TWS_2025/TWS_beige.jpg" alt="Audífonos TWS 2025 Beige" class="carousel-image" />
+        </div>
+        <div class="carousel-nav">
+          <button class="carousel-button prev" data-product-id="tws2025">&#10094;</button>
+          <button class="carousel-button next" data-product-id="tws2025">&#10095;</button>
+        </div>
+      </div>
+      <h2>Audífonos Inalámbricos TWS 2025</h2>
+      <p>Experiencia de audio inmersiva con colores modernos.</p>
+      <span>$99.99</span>
+      <button>Comprar</button>
+    </div>
+
+    <div class="producto">
+      <div class="carousel-container">
+        <div class="carousel-track" data-product-id="smart-negro">
+          <img src="PRODUCTOS/SMART/reloj_negro.jpg" alt="Smartwatch Negro" class="carousel-image" />
+          </div>
+        <div class="carousel-nav">
+          <button class="carousel-button prev" data-product-id="smart-negro">&#10094;</button>
+          <button class="carousel-button next" data-product-id="smart-negro">&#10095;</button>
+        </div>
+      </div>
+      <h2>Smartwatch Elite (Negro)</h2>
       <p>Monitorea tu salud y recibe notificaciones.</p>
       <span>$89.99</span>
       <button>Comprar</button>
     </div>
+
     <div class="producto">
-      <img src="https://via.placeholder.com/300x200?text=Auriculares+Pro" alt="Auriculares Inalámbricos Pro" />
-      <h2>Auriculares Inalámbricos Pro</h2>
-      <p>Cancelación de ruido activa y audio espacial.</p>
-      <span>$199.99</span>
+      <div class="carousel-container">
+        <div class="carousel-track" data-product-id="smart-rosa">
+          <img src="PRODUCTOS/SMART/reloj_rosa.jpg" alt="Smartwatch Rosa" class="carousel-image" />
+          </div>
+        <div class="carousel-nav">
+          <button class="carousel-button prev" data-product-id="smart-rosa">&#10094;</button>
+          <button class="carousel-button next" data-product-id="smart-rosa">&#10095;</button>
+        </div>
+      </div>
+      <h2>Smartwatch Elite (Rosa)</h2>
+      <p>Estilo y funcionalidad en tu muñeca.</p>
+      <span>$89.99</span>
       <button>Comprar</button>
     </div>
+
     <div class="producto">
-      <img src="https://via.placeholder.com/300x200?text=Laptop+Ultrabook" alt="Laptop Ultrabook" />
-      <h2>Laptop Ultrabook</h2>
-      <p>Potencia y portabilidad para tus proyectos.</p>
-      <span>$1299.00</span>
+      <div class="carousel-container">
+        <div class="carousel-track" data-product-id="smart-plateado">
+          <img src="PRODUCTOS/SMART/reloj_plateado.jpg" alt="Smartwatch Plateado" class="carousel-image" />
+          </div>
+        <div class="carousel-nav">
+          <button class="carousel-button prev" data-product-id="smart-plateado">&#10094;</button>
+          <button class="carousel-button next" data-product-id="smart-plateado">&#10095;</button>
+        </div>
+      </div>
+      <h2>Smartwatch Elite (Plateado)</h2>
+      <p>Elegancia y tecnología en un solo dispositivo.</p>
+      <span>$89.99</span>
       <button>Comprar</button>
     </div>
+
     <div class="producto">
-      <img src="https://via.placeholder.com/300x200?text=Teclado+Mecanico" alt="Teclado Mecánico" />
-      <h2>Teclado Mecánico RGB</h2>
-      <p>Diseño retroiluminado y respuesta táctil.</p>
-      <span>$79.99</span>
-      <button>Comprar</button>
-    </div>
-    <div class="producto">
-      <img src="https://via.placeholder.com/300x200?text=Monitor+Curvo" alt="Monitor Curvo" />
-      <h2>Monitor Curvo Ultrawide</h2>
-      <p>Inmersión total para gaming y trabajo.</p>
-      <span>$349.99</span>
+      <div class="carousel-container">
+        <div class="carousel-track" data-product-id="smart-plata-negro">
+          <img src="PRODUCTOS/SMART/reloj_plateado_negro.jpg" alt="Smartwatch Plateado y Negro" class="carousel-image" />
+          </div>
+        <div class="carousel-nav">
+          <button class="carousel-button prev" data-product-id="smart-plata-negro">&#10094;</button>
+          <button class="carousel-button next" data-product-id="smart-plata-negro">&#10095;</button>
+        </div>
+      </div>
+      <h2>Smartwatch Elite (Plata/Negro)</h2>
+      <p>Combinación perfecta de estilo y rendimiento.</p>
+      <span>$89.99</span>
       <button>Comprar</button>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Nova Store. Todos los derechos reservados.</p>
+    <p>&copy; 2025 Nova Tech Store. Todos los derechos reservados.</p>
   </footer>
 
   <script src="script.js"></script>
